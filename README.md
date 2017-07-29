@@ -23,3 +23,7 @@
 
 - Add Privileges
     * `postgres=# GRANT ALL PRIVILEGES ON DATABASE example_db to linus;`
+
+## Mysql
+- Dump remote database `p` it is necessary when it does it requires a password  
+    * `mysqldump -r output.sql -u user -p -d database -h localhost`
