@@ -4,7 +4,11 @@
 
 - Alter version default of Python install in on Ubuntu
     * `$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10`
-
+- RealPath of File (Absolute Path)
+    ``` 
+    $ realpath mysqld.cnf
+    /etc/mysql/mysql.conf.d/mysqld.cnf 
+    ```
 ## PostgreSQL
 - Create user with password
     * `postgres=# CREATE USER linus WITH PASSWORD 'linux';`
@@ -27,3 +31,25 @@
 ## Mysql
 - Dump remote database `p` it is necessary when it does it requires a password  
     * `mysqldump -r output.sql -u user -p -d database -h localhost`
+- Install MysqlServer
+    * `apt-get install mysql-server`
+- Add file for it's not asking password & user
+    * touch ~/.my.cnf
+    ```
+    [client]
+    user=mysqluser
+    password=mysqlpass
+    ```
+- Allow access remote MysqlServer
+    * vi /etc/mysql/mysql.conf.d/mysqld.cnf
+    * alter from `bind-address = 127.0.0.1` to `bind-address = 0.0.0.0`
+    * `sudo /etc/init.d/mysql restart`
+- Create user with access remote
+    * `mysql> CREATE USER 'jonhslow'@'%' IDENTIFIED BY 'winterfell' `
+- Create Database
+    * `mysql> CREATE DATABASE name_database; `
+- Add Privileges for access database
+    * `mysql> USE name_database;`
+    * `mysql> GRANT ALL PRIVILEGES ON name_database TO 'jonhslow'@'%';`
+- Restore Database
+    * `mysql -u <user> -p <password> <name_database> < database.sql`
