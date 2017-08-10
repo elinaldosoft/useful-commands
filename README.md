@@ -9,6 +9,9 @@
     $ realpath mysqld.cnf
     /etc/mysql/mysql.conf.d/mysqld.cnf 
     ```
+- Enable NoPassword for privileges of sudo
+    * `sudo visudo`
+    * `user ALL=(ALL:ALL) NOPASSWD:ALL`
 ## PostgreSQL
 - Create user with password
     * `postgres=# CREATE USER linus WITH PASSWORD 'linux';`
