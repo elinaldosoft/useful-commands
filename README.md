@@ -12,6 +12,13 @@
 - Enable NoPassword for privileges of sudo
     * `sudo visudo`
     * `user ALL=(ALL:ALL) NOPASSWD:ALL`
+### NFS
+    - Install On the Client 
+        * `sudo apt-get install nfs-common`
+    - Error `OSError: [Errno 37] No locks available`
+        * `sudo systemctl enable rpc-statd  # Enable statd on boot`
+        * `sudo systemctl start rpc-statd  # Start statd for the current session`
+
 ## PostgreSQL
 - Create user with password
     * `postgres=# CREATE USER linus WITH PASSWORD 'linux';`
