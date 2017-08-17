@@ -63,3 +63,9 @@
     * `mysql> GRANT ALL PRIVILEGES ON name_database TO 'jonhslow'@'%';`
 - Restore Database
     * `mysql -u <user> -p <password> <name_database> < database.sql`
+
+## GIT
+- Ignore file only in your environment 
+    * `git update-index --assume-unchanged [<file>...]`
+- Restore file ignored only in your environment
+    * `git update-index --no-assume-unchanged <file>`
