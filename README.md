@@ -75,3 +75,5 @@
     * `git remote add origin https://github.com/user/repo.git`
 - List info repository remote
     * `git remote -v`
+- Renaming a remote
+    * `git remote rename origin destination`
