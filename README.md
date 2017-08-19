@@ -69,3 +69,9 @@
     * `git update-index --assume-unchanged [<file>...]`
 - Restore file ignored only in your environment
     * `git update-index --no-assume-unchanged <file>`
+- Remove Repository origin remote
+    * `git remote rm origin`
+- Add Repository origin remote
+    * `git remote add origin https://github.com/user/repo.git`
+- List info repository remote
+    * `git remote -v`
