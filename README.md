@@ -77,3 +77,7 @@
     * `git remote -v`
 - Renaming a remote
     * `git remote rename origin destination`
+
+## Ruby
+- Alter Version ruby install Ubuntu
+    * `sudo update-alternatives --config ruby`
